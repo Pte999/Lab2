@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSetOptions>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\iomap.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\pc_any\iomap.iom" LastWriteTime="2016-05-31 11:52:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\pc_any\pvmap.vvm" LastWriteTime="2016-05-31 11:52:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\channelconfiguration.xml" LastWriteTime="2023-11-14 17:11:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\hardware.hw" LastWriteTime="2016-05-31 11:52:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\pc_any\cpu.sw" LastWriteTime="2016-05-31 11:52:14" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Simulation\PC_any\IoMap.iom&quot; &quot;$(AS_PROJECT_PATH)\Physical\Simulation\PC_any\PvMap.vvm&quot; -m &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\ConfigInfo.cfi&quot; -g &quot;$(AS_PROJECT_PATH)\Temp\Objects\Declarations.lst&quot; -x &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\ChannelConfiguration.xml&quot; -v V1.00.0 -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any&quot; -iomap -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\iomap.br&quot; -T SG4 -B D4.52 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Simulation.PC_any&quot;" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\ashwac.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\hardware.hw" LastWriteTime="2016-05-31 11:52:14" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Simulation\Hardware.hw&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\ashwac.br&quot; -L &quot;Acp10_MC: V5.02.1, Acp10man: V5.02.1, Acp10par: V5.02.1, Acp10sdc: V5.02.1, AsBrStr: V*, AsIecCon: V*, asstring: V*, astime: V*, brsystem: V*, NcGlobal: V5.02.1, Operator: V*, Runtime: V*, sys_lib: V*&quot; -c &quot;Simulation&quot; -Z &quot;Acp10Arnc0: 5.2.1, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, Connectivity: n.d, AAS: n.d&quot; -M IA32 -B D4.52 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Simulation&quot; -T SG4 " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\sysconf.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\hardware.hw" LastWriteTime="2016-05-31 11:52:14" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Simulation\Hardware.hw&quot;  -c &quot;Simulation&quot; -sysconf -S &quot;PC_any&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\sysconf.br&quot; -T SG4 -B D4.52 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Simulation&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\asfw.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\hardware.hw" LastWriteTime="2016-05-31 11:52:14" />
+    <Prerequisite ID="c:\brautomation\as45\upgrades\modified.txt" LastWriteTime="2018-12-17 12:20:22" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Simulation\Hardware.hw&quot;  -v V1.00.0 -S &quot;PC_any&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\asfw.br&quot; -T SG4 -B D4.52 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;Simulation&quot; -zip -s &quot;Simulation&quot; -firmware " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\ashwd.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\hardware.hw" LastWriteTime="2016-05-31 11:52:14" />
+    <Prerequisite ID="c:\brautomation\as45\upgrades\modified.txt" LastWriteTime="2018-12-17 12:20:22" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Simulation\Hardware.hw&quot;  -v V1.00.0 -S &quot;PC_any&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\ashwd.br&quot; -T SG4 -B D4.52 -P &quot;$(AS_PROJECT_PATH)&quot; -c &quot;Simulation&quot; -zip -s &quot;Simulation&quot; -hwd " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\arconfig.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\pc_any\iomap.iom" LastWriteTime="2016-05-31 11:52:14" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\hardware.hw" LastWriteTime="2016-05-31 11:52:14" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Physical\Simulation\PC_any\IoMap.iom&quot; &quot;$(AS_PROJECT_PATH)\Physical\Simulation\Hardware.hw&quot;  -arconfig -L &quot;Acp10_MC: V5.02.1, Acp10man: V5.02.1, Acp10par: V5.02.1, NcGlobal: V5.02.1&quot; -C &quot;/RT=1000 /AM=* /SDT=5 /DAIP=10.0.1.10 /REPO=11159 /ANSL=1 /PT=11169&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -c &quot;Simulation&quot; -v V1.00.0 -S &quot;PC_any&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\arconfig.br&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\ChannelConfiguration.xml&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\HardwareConfiguration.xml&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\ReActionTechnologyConfiguration.xml&quot; -T SG4 -B D4.52 -P &quot;$(AS_PROJECT_PATH)&quot; -s &quot;Simulation&quot; " />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\udbdef.br">
+    <Prerequisite ID="c:\brautomation\as45\as\technologypackages\unitsystem\n.d\transfer\modules\sg4\udbdef.br" LastWriteTime="2018-11-12 17:25:24" />
+    <CommandLine Parameter="/c copy /B /Y &quot;C:\BrAutomation\AS45\AS\TechnologyPackages\UnitSystem\n.d\Transfer\Modules\SG4\udbdef.br&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\udbdef.br&quot; &gt; nul" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\tcdata\tcdata.imx">
+    <Prerequisite ID="c:\brautomation\as45\as\technologypackages\textsystem\n.d\objectcatalog\elements\textconfig\template\tc.textconfig" LastWriteTime="2018-11-12 17:25:24" />
+    <CommandLine Parameter=" -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\TCData\TCData.imx&quot; -c &quot;C:\BrAutomation\AS45\AS\TechnologyPackages\TextSystem\n.d\ObjectCatalog\Elements\TextConfig\Template\TC.textconfig&quot; -I &quot;C:\BrAutomation\AS\System\D0452&quot; &quot;C:\BrAutomation\AS45\AS\TechnologyPackages\Acp10Arnc0\5.2.1&quot; &quot;C:\BrAutomation\AS45\AS\TechnologyPackages\UnitSystem\n.d&quot; -P &quot;$(AS_PROJECT_PATH)&quot;" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\tcdata\tcdata.s18d">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\tcdata\tcdata.imx" LastWriteTime="2023-11-14 17:11:18" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\TCData\TCData.imx&quot; -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\TCData\TCData.s18d&quot;" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\tcdata.br">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\tcdata\tcdata.s18d" LastWriteTime="2023-11-14 17:11:20" />
+    <CommandLine Parameter="&quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\TCData\TCData.s18d&quot;  -o &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\TCData.br&quot; -t TextModule" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\asieccon.br">
+    <Prerequisite ID="c:\brautomation\as\system\d0452\sg4\ia32\asieccon.br" LastWriteTime="2018-12-06 02:00:42" />
+    <CommandLine Parameter="/c copy /B /Y &quot;C:\BrAutomation\AS\System\D0452\SG4\IA32\AsIecCon.br&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\AsIecCon.br&quot; &gt; nul" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\astime.br">
+    <Prerequisite ID="c:\brautomation\as\system\d0452\sg4\ia32\astime.br" LastWriteTime="2018-12-06 02:00:48" />
+    <CommandLine Parameter="/c copy /B /Y &quot;C:\BrAutomation\AS\System\D0452\SG4\IA32\astime.br&quot; &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\astime.br&quot; &gt; nul" />
+  </Rule>
+  <Rule ID="#cpu_tp.mak">
+    <CommandLine Parameter=" -r -f &quot;$(AS_PROJECT_PATH)\Temp\Objects\Simulation\PC_any\#cpu_tp.mak&quot; -k" />
+  </Rule>
+  <Rule ID="$(AS_PROJECT_PATH)\binaries\simulation\pc_any\transfer.lst">
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\iomap.br" LastWriteTime="2023-11-14 17:11:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\ashwac.br" LastWriteTime="2023-11-14 17:11:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\sysconf.br" LastWriteTime="2023-11-14 17:11:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\asfw.br" LastWriteTime="2023-11-14 17:11:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\ashwd.br" LastWriteTime="2023-11-14 17:11:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\arconfig.br" LastWriteTime="2023-11-14 17:11:18" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\udbdef.br" LastWriteTime="2018-11-12 17:25:24" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\tcdata.br" LastWriteTime="2023-11-14 17:11:20" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\asieccon.br" LastWriteTime="2018-12-06 02:00:42" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\temp\objects\simulation\pc_any\astime.br" LastWriteTime="2018-12-06 02:00:48" />
+    <Prerequisite ID="$(AS_PROJECT_PATH)\physical\simulation\pc_any\cpu.sw" LastWriteTime="2016-05-31 11:52:14" />
+    <CommandLine Parameter=" &quot;$(AS_PROJECT_PATH)\DriveControl.apj&quot; -t &quot;$(AS_PROJECT_PATH)\Temp&quot; -o &quot;$(AS_PROJECT_PATH)\Binaries&quot; -c &quot;Simulation&quot; -i &quot;C:\BrAutomation\AS45&quot; -S &quot;PC_any&quot; -A &quot;AR000&quot; -pil -swFiles &quot;$(AS_PROJECT_PATH)\Physical\Simulation\PC_any\Cpu.sw&quot; -Z &quot;Acp10Arnc0: 5.2.1, UnitSystem: n.d, TextSystem: n.d, ProgrammingSystem: n.d, Connectivity: n.d, AAS: n.d&quot; -C &quot;/RT=1000 /AM=* /SDT=5 /DAIP=10.0.1.10 /REPO=11159 /ANSL=1 /PT=11169&quot; -D &quot;/IF=tcpip /LOPO=11159 /SA=1&quot; -M IA32 -T SG4" />
+  </Rule>
+</RuleSetOptions>

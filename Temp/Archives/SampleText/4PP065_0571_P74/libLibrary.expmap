@@ -1,0 +1,8 @@
+{
+  global:
+    DriveStateMashine;
+    LedStateMachine;
+    DoorStateMachine;
+  local:
+    *;
+ };
